@@ -429,11 +429,24 @@ def _sapi_fallback_tts(text: str, lang_hint: str = "en") -> Optional[str]:
                 "if($v){ $synth.SelectVoice($v) }"
             )
 
+        # ps = (
+        #     "$ErrorActionPreference='Stop';"
+        #     "Add-Type -AssemblyName System.Speech;"
+        #     f"$p='{str(wav_path).replace('\\', '/')}';"
+        #     f"$t='{str(tmp_txt).replace('\\', '/')}';"
+        #     "$s=New-Object System.Speech.Synthesis.SpeechSynthesizer;"
+        #     f"{pick_voice}"
+        #     "$txt=Get-Content -Raw -Encoding UTF8 $t;"
+        #     "$s.SetOutputToWaveFile($p);"
+        #     "$s.Rate = -2;"  # slower, warmer fallback delivery
+        #     "$s.Speak($txt);"
+        #     "$s.Dispose();"
+        # )
         ps = (
             "$ErrorActionPreference='Stop';"
             "Add-Type -AssemblyName System.Speech;"
-            f"$p='{str(wav_path).replace('\\', '/')}';"
-            f"$t='{str(tmp_txt).replace('\\', '/')}';"
+            "$p='" + str(wav_path).replace("\\", "/") + "';"
+            "$t='" + str(tmp_txt).replace("\\", "/") + "';"
             "$s=New-Object System.Speech.Synthesis.SpeechSynthesizer;"
             f"{pick_voice}"
             "$txt=Get-Content -Raw -Encoding UTF8 $t;"
@@ -442,6 +455,7 @@ def _sapi_fallback_tts(text: str, lang_hint: str = "en") -> Optional[str]:
             "$s.Speak($txt);"
             "$s.Dispose();"
         )
+
         res = subprocess.run(
             ["powershell","-NoProfile","-NonInteractive","-ExecutionPolicy","Bypass","-Command", ps],
             capture_output=True, text=True, timeout=60
