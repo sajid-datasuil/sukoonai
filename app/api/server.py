@@ -14,7 +14,7 @@ from fastapi import FastAPI, Body, Response, Request, UploadFile, File, HTTPExce
 from pydantic import BaseModel
 
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api.middleware import PIIRedactionMiddleware
@@ -95,6 +95,10 @@ class ConsentIn(BaseModel):
     agree: bool
     locale: Optional[str] = "en"
     timestamp_ms: Optional[int] = None
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/ui")
 
 @app.get("/healthz")
 def healthz():
