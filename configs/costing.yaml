@@ -1,0 +1,33 @@
+﻿# SukoonAI Costing (PKR)
+
+currency: PKR
+usd_to_pkr: 280  # update during Week-7 audit if needed
+
+# Unit costs (placeholders; tune in Week-7 audit/evidence)
+unit_costs:
+  web:
+    per_message_pkr: 0.50
+  whatsapp:
+    per_message_pkr: 3.00
+  llm:
+    gpt_4o_mini:
+      input_token_pkr: 0.00007
+      output_token_pkr: 0.00014
+  stt:
+    per_minute_pkr: 1.20
+  tts:
+    per_character_pkr: 0.00050
+  retrieval:
+    per_query_pkr: 0.05
+
+# Public plans (aligns with PRD/Site copy)
+plans:
+  free:
+    price_pkr: 0
+    daily_voice_minutes: 2
+  plus:
+    price_pkr: 799
+    monthly_voice_minutes: 60
+  family:
+    price_pkr: 1499
+    monthly_voice_minutes: 180

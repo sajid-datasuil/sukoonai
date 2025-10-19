@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "flow_id": "default",
+  "collect": ["intent", "plan", "means", "timeframe", "location", "consent_whatsapp"],
+  "confirm_prompts": {
+    "en": "I want to make sure I understood you correctly. Is this right?",
+    "ur": "میں تصدیق کرنا چاہتا/چاہتی ہوں کہ میں نے صحیح سمجھا ہے۔ کیا یہ درست ہے؟"
+  },
+  "escalate_deadline_seconds": 5,
+  "handoff": {
+    "voice": { "action": "connect_human" },
+    "whatsapp": {
+      "default_send": true,
+      "template_name": "sukoon_crisis_resources_v1",
+      "fields": {
+        "support_line": "{{support_line}}",
+        "immediate_help": "{{immediate_help}}",
+        "self_help": "{{self_help_brief}}"
+      }
+    }
+  },
+  "decision_schema": {
+    "type": "object",
+    "required": ["crisis", "signals", "actions"],
+    "properties": {
+      "crisis": { "type": "boolean" },
+      "signals": {
+        "type": "object",
+        "required": ["intent", "plan", "means", "timeframe", "location"],
+        "properties": {
+          "intent": { "type": "string" },
+          "plan": { "type": "string" },
+          "means": { "type": "string" },
+          "timeframe": { "type": "string" },
+          "location": { "type": "string" }
+        }
+      },
+      "actions": {
+        "type": "object",
+        "required": ["connect_human", "send_whatsapp", "resources"],
+        "properties": {
+          "connect_human": { "type": "boolean" },
+          "send_whatsapp": { "type": "boolean" },
+          "resources": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

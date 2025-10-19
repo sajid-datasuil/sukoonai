@@ -1,0 +1,16 @@
+version: "1.0"
+thresholds:
+  tokens_in_max: 1400
+  tokens_out_max: 300
+  cogs_per_min_max: 0.008
+  p50_ms_max: 600
+  p95_ms_max: 1200
+execution:
+  utterances:
+    - lang: en
+      text: "Quick grounding please."
+    - lang: en
+      text: "Give me a short exercise for anxiety."
+    - lang: en
+      text: "Low mood check-in."
+  turns_per_utterance: 10

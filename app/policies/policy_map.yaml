@@ -1,0 +1,23 @@
+﻿version: "1.0"
+rules:
+  - tag: clinical.ask_medication
+    action: refuse
+    template: clinical.medication
+  - tag: clinical.ask_diagnosis
+    action: refuse
+    template: clinical.diagnosis
+  - tag: scope.out_of_scope
+    action: refuse
+    template: generic.out_of_scope
+  - tag: legal.request
+    action: refuse
+    template: legal.generic
+  - tag: crisis.self_harm
+    action: crisis_flow
+    template: crisis.flow
+  - tag: crisis.harm_others
+    action: crisis_flow
+    template: crisis.flow
+  - tag: generic
+    action: refuse
+    template: generic.fallback

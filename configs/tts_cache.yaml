@@ -1,0 +1,24 @@
+﻿Set-Content .\configs\tts_cache.yaml @'
+version: "1.0"
+voices:
+  default: "ur-en-neutral-female"
+utterances:
+  - key: box_breathing_en
+    lang: en
+    text: "Let's try box breathing: inhale four, hold four, exhale four, hold four."
+  - key: box_breathing_ur
+    lang: ur
+    text: "آئیے باکس بریتھنگ کریں: چار تک سانس لیں، چار تک روکیں، چار تک چھوڑیں، چار تک روکیں۔"
+  - key: 54321_en
+    lang: en
+    text: "5-4-3-2-1 grounding: five things you can see; four touch; three hear; two smell; one taste."
+  - key: 54321_ur
+    lang: ur
+    text: "5-4-3-2-1 گراؤنڈنگ: پانچ چیزیں جو آپ دیکھیں؛ چار چھوئیں؛ تین سنیں؛ دو سونگھیں؛ ایک چکھیں۔"
+match:
+  rules:
+    - key: box_breathing
+      contains: ["breathe in 4", "box breathing", "hold 4", "باکس", "سانس", "روکیں"]
+    - key: 54321
+      contains: ["5-4-3-2-1", "54321", "grounding", "گراؤنڈنگ", "پانچ چیزیں", "چار", "تین", "دو", "ایک"]
+'@ -Encoding UTF8

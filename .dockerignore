@@ -1,0 +1,37 @@
+# VCS
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+
+# IDE/editor
+.vscode/
+.idea/
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Logs & coverage
+logs/
+*.log
+.coverage
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+
+# Large/local-only assets (keep ignored unless tests require them)
+data/
+notebooks/
+archive/

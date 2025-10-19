@@ -1,0 +1,14 @@
+# app/eval/meta_placeholders.yaml  ← NEW (local-only values; safe to paste)
+intent:
+  - "plan"
+  - "intend"
+  - "irada"
+means:
+  - "rope"
+  - "overdose"
+  - "zeher"
+  - "poison"
+time:
+  - "tonight"
+  - "aaj raat"
+  - "kal subah"

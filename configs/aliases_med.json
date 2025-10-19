@@ -1,0 +1,26 @@
+{
+  "anxiety": {
+    "en": [
+      "anxiety", "anxious", "anxiety disorder", "generalized anxiety disorder",
+      "gad", "worry", "nervousness", "restlessness", "agitation", "panic", "panic attack", "fear"
+    ],
+    "ur": [
+      "پریشانی", "بے چینی", "گھبراہٹ", "تشویش", "ڈر", "دل گھبرانا"
+    ],
+    "roman-ur": [
+      "pareshaani", "bechaini", "ghabrahat", "tashweesh", "dar", "dil ghabrana", "fikr"
+    ]
+  },
+  "depression": {
+    "en": [
+      "depression", "depressed", "low mood", "sadness", "major depressive disorder",
+      "mdd", "clinical depression", "anhedonia", "hopelessness"
+    ],
+    "ur": [
+      "افسردگی", "اداسی", "مایوسی"
+    ],
+    "roman-ur": [
+      "afsurdgi", "udaasi", "mayusi"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+﻿{
+    "crisis_pass":  true,
+    "finance_pass":  true,
+    "privacy_ok":  true,
+    "samples":  {
+                    "crisis":  {
+                                   "route":  "crisis",
+                                   "abstain":  false,
+                                   "answer":  "",
+                                   "timings":  {
+                                                   "handoff_ms":  0
+                                               },
+                                   "evidence":  [
+
+                                                ],
+                                   "usage":  {
+                                                 "total_tokens":  0
+                                             }
+                               },
+                    "abstain":  {
+                                    "ok":  true,
+                                    "route":  "abstain",
+                                    "answer":  "Plan cap reached for Free. Please upgrade to continue today.",
+                                    "abstain":  true,
+                                    "overage":  {
+                                                    "user":  "demo",
+                                                    "plan":  "Free",
+                                                    "cap_minutes":  15,
+                                                    "day":  "20251014",
+                                                    "used":  3,
+                                                    "would_use":  1002
+                                                }
+                                }
+                }
+}

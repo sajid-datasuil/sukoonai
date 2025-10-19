@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SukoonAI Evidence Chunk",
+  "type": "object",
+  "required": [
+    "id",
+    "doc_id",
+    "chunk_id",
+    "title",
+    "section_path",
+    "text",
+    "content_hash",
+    "source_key",
+    "source_url",
+    "license",
+    "distribution",
+    "language",
+    "doc_type",
+    "created_at"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "doc_id": { "type": "string" },
+    "chunk_id": { "type": "string" },
+    "title": { "type": "string" },
+    "section_path": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "headings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "text": { "type": "string" },
+    "tokens_est": { "type": "integer", "minimum": 0 },
+    "content_hash": { "type": "string" },
+    "source_key": { "type": "string" },
+    "source_url": { "type": "string" },
+    "license": { "type": "string" },
+    "distribution": { "type": "string", "enum": ["public", "internal-only"] },
+    "language": { "type": "string", "enum": ["ur", "en", "roman-ur", "mixed", "other"] },
+    "topics": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "icd11_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "doc_type": { "type": "string" },
+    "page_span": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "crisis_flag": { "type": "boolean" },
+    "created_at": { "type": "string" },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": false
+}

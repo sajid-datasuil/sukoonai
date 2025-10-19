@@ -1,0 +1,11 @@
+# Repo Map (what lives where)
+- app/: FastAPI runtime, pipelines, tools
+- artifacts/: outputs (audio, costs, logs) [gitignored]
+- configs/: YAML configs and feature flags
+- data/: seeds (incl. CKG-lite CSVs)
+- datasets/: large corpora (licensing notes)
+- docs/: documentation (this folder)
+- prompts/: system & user prompt templates
+- schemas/: pydantic/models/DDL
+- scripts/: utilities (RAP scripts live here)
+- tests/: pytest suites

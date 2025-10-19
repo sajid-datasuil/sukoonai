@@ -1,0 +1,57 @@
+{
+  "app": [
+    "__pycache__",
+    "agent",
+    "api",
+    "audio",
+    "channels",
+    "cli",
+    "eval",
+    "ingest",
+    "llm",
+    "ops",
+    "pipeline",
+    "policies",
+    "retrieval",
+    "runtime",
+    "safety",
+    "tts",
+    "utils",
+    "voice"
+  ],
+  "artifacts": [
+    "audio",
+    "eval",
+    "open_evidence",
+    "ops"
+  ],
+  "configs": [],
+  "data": [
+    "curated",
+    "golden",
+    "index",
+    "kg",
+    "raw",
+    "samples",
+    "wer_fixtures"
+  ],
+  "datasets": [
+    "fixtures"
+  ],
+  "docs": [],
+  "logs": [
+    "rollup",
+    "runtime",
+    "wer"
+  ],
+  "prompts": [],
+  "schemas": [],
+  "scripts": [],
+  "tests": [
+    "aliases",
+    "eval",
+    "evidence_golds",
+    "policies",
+    "rap"
+  ]
+}

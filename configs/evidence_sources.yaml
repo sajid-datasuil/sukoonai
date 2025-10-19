@@ -1,0 +1,43 @@
+# Source registry: license/distribution posture
+sources:
+  icd11:
+    title: "ICD-11 Chapter 06 (Extracts)"
+    source_url: "https://icd.who.int/"
+    license: "WHO terms - cite/link"
+    distribution: "internal-only"
+    doc_type: "taxonomy"
+
+  list_free:
+    title: "List - Free Datasets - SukoonAI"
+    source_url: null
+    license: "DataSuil internal"
+    distribution: "internal-only"
+    doc_type: "catalog"
+
+  nimh:
+    title: "NIMH Anxiety/Depression Pages"
+    source_url: "https://www.nimh.nih.gov/"
+    license: "Site terms – cite/link"
+    distribution: "internal-only"
+    doc_type: "psychoeducation"
+
+  medlineplus:
+    title: "MedlinePlus Mental Health Pages"
+    source_url: "https://medlineplus.gov/"
+    license: "Site terms – cite/link"
+    distribution: "internal-only"
+    doc_type: "psychoeducation"
+
+  nhs:
+    title: "NHS Mental Health Conditions"
+    source_url: "https://www.nhs.uk/mental-health/"
+    license: "Open Government Licence v3 (check per page)"
+    distribution: "internal-only"
+    doc_type: "psychoeducation"
+
+  nice:
+    title: "NICE Guidance (Mental Health)"
+    source_url: "https://www.nice.org.uk/"
+    license: "Open content – check page terms"
+    distribution: "internal-only"
+    doc_type: "guidance"

@@ -1,0 +1,110 @@
+﻿﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SukoonAI &ndash; Web Demo</title>
+  <link rel="icon" type="image/png" href="/media/branding/logo.png"/>
+  <!-- Cache-busted to ensure latest CSS loads -->
+  <link rel="stylesheet" href="/static/web/styles.css?v=20251018a"/>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand container">
+      <img src="/media/branding/logo.png" alt="SukoonAI logo" class="logo">
+      <div class="brand-text">
+        <div class="brand-title">SukoonAI &ndash; Web Demo</div>
+        <div class="brand-subtitle">A Mental Wellness Agent</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <img class="avatar" src="/media/branding/image.png" alt="SukoonAI guide portrait" loading="eager">
+      <div class="hero-copy">
+        <h1>Calm, Trustworthy, Evidence-based support</h1>
+        <p>
+          Two modes: <b>Text Chat</b> and <b>Voice Chat</b> •
+          Privacy: <b>Minimal logging</b> •
+          Sensitive topics are handled with extra care.
+        </p>
+
+        <!-- Badges -->
+        <div class="badges">
+          <span class="badge">Text Chat: English / Urdu-Roman / Urdu-Urdu</span>
+          <span class="badge">Voice: English / Urdu</span>
+          <span class="badge">Voice minutes apply</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App -->
+  <main class="container section">
+    <!-- Tabs -->
+    <div class="tabs" role="tablist" aria-label="Chat type">
+      <button id="tab-text" class="tab active" role="tab" aria-selected="true">Text Chat</button>
+      <button id="tab-voice" class="tab" role="tab" aria-selected="false">Voice Chat</button>
+    </div>
+
+    <!-- Text Chat pane -->
+    <section id="pane-text" class="card pad" role="tabpanel" aria-labelledby="tab-text">
+      <!-- Options row -->
+      <div class="row" style="align-items:center; gap:8px; margin-bottom:6px;">
+        <label>Language</label>
+        <button id="text-opts-toggle" class="btn light" type="button" aria-expanded="false">Options</button>
+      </div>
+
+      <!-- Advanced options (hidden by default) -->
+      <div id="text-opts" class="hidden" role="group" aria-label="Text language options">
+        <div class="row">
+          <label for="text-lang-combo">Language</label>
+          <select id="text-lang-combo" aria-label="Text language">
+            <option value="en:roman" selected>English-English</option>
+            <option value="ur:roman">Urdu-Roman</option>
+            <option value="ur:arabic">Urdu-Urdu</option>
+          </select>
+        </div>
+      </div>
+
+      <textarea id="text-input" rows="3" placeholder="Type your message..."></textarea>
+      <div class="row end">
+        <button id="text-send" class="btn">Send</button>
+      </div>
+      <div id="text-transcript" class="transcript" aria-live="polite"></div>
+    </section>
+
+    <!-- Voice Chat pane -->
+    <section id="pane-voice" class="card pad hidden" role="tabpanel" aria-labelledby="tab-voice">
+      <div class="row" style="align-items:center; gap:8px; margin-bottom:6px;">
+        <label>Language</label>
+        <button id="voice-opts-toggle" class="btn light" type="button" aria-expanded="false">Options</button>
+      </div>
+
+      <div id="voice-opts" class="hidden" role="group" aria-label="Voice language options">
+        <div class="row">
+          <label for="voice-lang">Voice</label>
+          <select id="voice-lang" aria-label="Voice language">
+            <option value="en" selected>English</option>
+            <option value="ur">Urdu</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="mic-btn" class="btn">Start recording</button>
+        <button id="stop-btn" class="btn light">Stop</button>
+        <div id="vu" class="vu"></div>
+      </div>
+
+      <div id="voice-transcript" class="transcript" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Cache-busted to ensure latest JS (with A2 helpers) loads -->
+  <script src="/static/web/app.js?v=20251018a"></script>
+</body>
+</html>

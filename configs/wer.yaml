@@ -1,0 +1,10 @@
+# WER evaluation config
+dataset_glob: "data/wer_fixtures/*.csv"
+# fail if average WER across all rows exceeds this
+max_wer: 0.15
+strip_punct: true
+lowercase: true
+normalize_spaces: true
+ignore_chars: ["\u200c", "\u200d"]
+aliases_path: "configs/wer_aliases.txt"   # optional; comment out to disable
+debug_top_n: 10                           # show N worst examples

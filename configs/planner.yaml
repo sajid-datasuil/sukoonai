@@ -1,0 +1,4 @@
+﻿min_score: 0.45
+top_k: 3
+abstain_score: 0.38
+no_network: true

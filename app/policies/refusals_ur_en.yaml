@@ -1,0 +1,29 @@
+﻿templates:
+  generic:
+    generic:
+      en: "I can’t help with that safely."
+      ur: "میں اس میں محفوظ طور پر مدد نہیں کر سکتا/سکتی۔"
+    out_of_scope:
+      en: "I’m trained for anxiety and depression only."
+      ur: "یہ موضوع میرے دائرہ کار سے باہر ہے۔ میں صرف اضطراب اور افسردگی پر توجہ دیتا/دیتی ہوں۔"
+    fallback:
+      en: "I can’t assist with that."
+      ur: "میں اس میں مدد نہیں کر سکتا/سکتی۔"
+
+  clinical:
+    medication:
+      en: "I can’t advise on medicines."
+      ur: "میں دواؤں/خوراک کے بارے میں مشورہ نہیں دے سکتا/سکتی۔"
+    diagnosis:
+      en: "I can’t diagnose conditions."
+      ur: "میں تشخیص نہیں کر سکتا/سکتی۔"
+
+  legal:
+    generic:
+      en: "I can’t provide legal advice."
+      ur: "میں قانونی مشورہ نہیں دے سکتا/سکتی۔"
+
+  crisis:
+    flow:
+      en: "I’m here with you and will connect you to trained help now."
+      ur: "میں آپ کے ساتھ ہوں اور ابھی آپ کو تربیت یافتہ مدد سے جوڑ رہا/رہی ہوں۔"

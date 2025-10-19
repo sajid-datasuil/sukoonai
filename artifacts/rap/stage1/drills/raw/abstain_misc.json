@@ -1,0 +1,62 @@
+﻿{
+    "ts_utc":  "2025-10-13T04:21:12Z",
+    "client_ms":  1077,
+    "drill":  "abstain_finance",
+    "response":  {
+                     "ok":  false,
+                     "route":  "assist",
+                     "safety":  {
+                                    "crisis":  false,
+                                    "category":  null,
+                                    "matched_terms":  [
+
+                                                      ],
+                                    "confidence":  0.0
+                                },
+                     "retrieval":  {
+                                       "evidence":  [
+                                                        {
+                                                            "id":  "kb-breathe",
+                                                            "title":  "Ú¯ÛØ±Û Ø³Ø§ÙØ³ (Box Breathing)",
+                                                            "excerpt":  "ÙØ§Ú© Ø³Û Ø¢ÛØ³ØªÛ Ø³Ø§ÙØ³ ÙÛÚºØ 4 ØªÚ© Ø±ÙÚ©ÛÚºØ Ù\u0085ÙÛ Ø³Û Ø¢ÛØ³ØªÛ ÚÚ¾ÙÚÛÚºâ2â3 Ù\u0085ÙÙ¹Û"
+                                                        }
+                                                    ]
+                                   },
+                     "answer":  "Ø§Ø³ ÙÙØª Ù\u0085ÛØ±Û Ø³Ø±ÙØ³ Ø¯Ø³ØªÛØ§Ø¨ ÙÛÛÚºÛ Ø¨Ø±Ø§ÛÙ Ú©Ø±Ù\u0085 Ú©ÚÚ¾ Ø¯ÛØ± Ø¨Ø¹Ø¯ Ø¯ÙØ¨Ø§Ø±Û Ú©ÙØ´Ø´ Ú©Ø±ÛÚº ÛØ§ Ù\u0085Ø³ØªÙØ¯ Ù\u0085Ø§ÛØ± Ø³Û Ø±Ø§Ø¨Ø·Û Ú©Ø±ÛÚºÛ",
+                     "abstain":  false,
+                     "usage":  {
+
+                               },
+                     "tts_path":  "artifacts/audio/tts/20251013/042112_04b259a2.wav",
+                     "metrics":  {
+                                     "safety_ms":  0,
+                                     "retrieval_ms":  0,
+                                     "llm_ms":  0,
+                                     "tts_ms":  379,
+                                     "total_ms":  379,
+                                     "tts_rtf":  0.0
+                                 },
+                     "evidence":  [
+                                      {
+                                          "id":  "kb-breathe",
+                                          "title":  "Ú¯ÛØ±Û Ø³Ø§ÙØ³ (Box Breathing)",
+                                          "excerpt":  "ÙØ§Ú© Ø³Û Ø¢ÛØ³ØªÛ Ø³Ø§ÙØ³ ÙÛÚºØ 4 ØªÚ© Ø±ÙÚ©ÛÚºØ Ù\u0085ÙÛ Ø³Û Ø¢ÛØ³ØªÛ ÚÚ¾ÙÚÛÚºâ2â3 Ù\u0085ÙÙ¹Û"
+                                      }
+                                  ],
+                     "latency_ms":  {
+                                        "safety_ms":  0,
+                                        "retrieval_ms":  0,
+                                        "llm_ms":  0,
+                                        "tts_ms":  379,
+                                        "total_ms":  379,
+                                        "tts_rtf":  0.0
+                                    },
+                     "timings":  {
+                                     "safety_ms":  0,
+                                     "plan_ms":  0,
+                                     "tts_ms":  379,
+                                     "handoff_ms":  0,
+                                     "total_ms":  379
+                                 }
+                 }
+}

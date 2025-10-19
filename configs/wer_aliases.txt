@@ -1,0 +1,14 @@
+# Roman-Urdu/Urdu/English spell variants (left -> right)
+nai => nahi
+hei => hai
+hain => hai
+hein => hain
+hain => hen
+karte hein => karte hain
+theek => thik
+aya => aayi
+ayi => aayi
+over whelmed => overwhelmed
+okey => okay
+zaroor => zarur
+breathing => breathing   # no-op example, shows format

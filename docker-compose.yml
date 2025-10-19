@@ -1,0 +1,11 @@
+services:
+  sukoonai:
+    build: .
+    image: sukoonai:dev
+    ports: ["8000:8000"]
+    environment:
+      OPENAI_API_MOCK: "1"
+      NO_NETWORK: "1"
+      VOICE_BACKEND_ASR: "mock"
+      VOICE_BACKEND_TTS: "mock"
+

@@ -1,0 +1,105 @@
+:root{
+  --brand-teal:#1f7f77;
+  --brand-blue:#59a6e5;
+  --ink:#1b2634;
+  --muted:#5b6777;
+  --bg:#f6f9fb;
+  --card:#ffffff;
+  --ring:rgba(31,127,119,.15);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+
+.container{max-width:980px;margin:0 auto;padding:0 16px}
+.section{margin-top:18px}
+
+.topbar{
+  position:sticky; top:0;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(130%) blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+  z-index:10
+}
+.brand{
+  display:flex; align-items:center; gap:12px;
+  padding:18px 0;                 /* a bit taller for breathing room */
+}
+.logo{
+  width:40px; height:40px;        /* larger logo */
+  object-fit:contain
+}
+/* Stacked title/subtitle */
+.brand-text{display:flex; flex-direction:column; line-height:1.15}
+.brand-title{font-weight:700; letter-spacing:.2px; font-size:1.15rem}
+.brand-subtitle{color:var(--muted); font-size:.95rem; margin-top:2px}
+
+.hero{
+  background:linear-gradient(135deg, rgba(89,166,229,.08), rgba(31,127,119,.08));
+  border-bottom:1px solid rgba(0,0,0,.06)
+}
+.hero-inner{display:flex;align-items:center;gap:16px;padding:16px 0}
+
+/* Avatar: show full head via slight upward crop; adjust 18%→10% if still tight */
+.avatar{
+  width:84px; height:84px;                 /* was 72×72 */
+  border-radius:50%;
+  object-fit:cover;
+  object-position:50% 18%;
+  border:2px solid rgba(255,255,255,.95);
+  box-shadow:0 6px 18px rgba(0,0,0,.12)
+}
+
+.hero-copy h1{margin:0;font-size:1.3rem}
+.hero-copy p{margin:.25rem 0 0;color:var(--muted)}
+.badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.badge{font-size:.78rem;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--ring)}
+
+.card{background:var(--card);border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;box-shadow:0 6px 24px rgba(27,38,52,.06)}
+.pad{padding:14px}
+
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.row.end{justify-content:flex-end}
+
+.tabs{display:flex;gap:8px;margin-bottom:8px}
+.tab{border:1px solid rgba(0,0,0,.1);background:#fff;padding:8px 12px;border-radius:9px;cursor:pointer}
+.tab.active{background:var(--ink);color:#fff}
+
+label{font-size:.9rem;color:var(--muted)}
+select, textarea{border-radius:10px;border:1px solid rgba(0,0,0,.12);padding:8px 10px;outline:none}
+select:focus, textarea:focus{box-shadow:0 0 0 4px var(--ring)}
+textarea{width:100%;resize:vertical;min-height:76px}
+
+.btn{background:var(--ink);color:#fff;border:none;border-radius:10px;padding:9px 14px;cursor:pointer}
+.btn.light{background:#eff4ff;color:#1b64ff}
+.btn:focus{box-shadow:0 0 0 4px rgba(30,100,255,.2)}
+
+.transcript{margin-top:10px;padding:10px;border-radius:10px;background:#fff;border:1px solid rgba(0,0,0,.06)}
+.hidden{display:none}
+.muted{color:var(--muted)}     /* helper */
+
+.vu{height:8px;min-width:140px;border-radius:999px;background:linear-gradient(90deg,#e6f3ff,#c4e6ff);flex:1}
+.vu.active{box-shadow:0 0 0 3px var(--ring)}
+
+/* Spinner + audio bar */
+.spinner{margin-top:8px;font-size:.9rem;color:var(--muted)}
+.audio-bar{display:flex;gap:10px;align-items:center;margin-top:8px}
+.err{color:#a40000}
+
+/* Make form controls inherit the site font & sizing */
+textarea, input, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* --- A2 tiny tweaks --- */
+.audio-bar > span { display:inline-block; }   /* ensures caption sits cleanly */
+.breadcrumb { margin-top:2px; font-size:0.9em; }  /* muted line under assistant turn */
+
+/* --- A3 helpers --- */
+.ribbon { font-size:.82rem; margin-bottom:6px; }
+.chip { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid rgba(0,0,0,.12); font-size:.8rem; margin-top:6px; background:#fff; }
+.chip.error { background:#fff3f3; border-color:#ffe0e0; color:#a40000; }

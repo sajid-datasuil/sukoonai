@@ -1,0 +1,14 @@
+# configs/ckg.yaml
+lambda: 0.25          # blend weight for BM25 + lambda * CKG
+max_syn_per_term: 5
+
+synonyms:
+  phq-9: ["phq9", "patient health questionnaire", "depression questionnaire"]
+  anxiety: ["worry", "ghabrahat", "bechaini"]
+  breathing: ["paced breathing", "4-6 breathing", "diaphragmatic"]
+
+lang_aliases:
+  ur:
+    worry: ["ghabrahat", "bechaini"]
+  roman:
+    worry: ["ghabrahat", "bechaini"]   # Romanized as-is for now (starter)

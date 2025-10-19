@@ -1,0 +1,13 @@
+# Caps for RAP plans
+Free:
+  minutes: 15
+  turns: 50
+  price_pkr: 0
+Standard:
+  minutes: 75
+  turns: 200
+  price_pkr: 499
+Premium:
+  minutes: 200
+  turns: 600
+  price_pkr: 999

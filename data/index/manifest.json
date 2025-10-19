@@ -1,0 +1,6 @@
+{
+  "backend": "python",
+  "count": 2,
+  "embedding_dim": 384,
+  "created_at": "2025-10-06T09:39:55Z"
+}

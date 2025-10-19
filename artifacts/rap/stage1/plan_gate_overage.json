@@ -1,0 +1,14 @@
+﻿{
+    "ok":  true,
+    "route":  "abstain",
+    "answer":  "Plan cap reached for Free. Please upgrade to continue today.",
+    "abstain":  true,
+    "overage":  {
+                    "user":  "demo",
+                    "plan":  "Free",
+                    "cap_minutes":  15,
+                    "day":  "20251013",
+                    "used":  0,
+                    "would_use":  999
+                }
+}

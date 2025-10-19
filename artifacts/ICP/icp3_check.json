@@ -1,0 +1,17 @@
+﻿{
+    "ok":  true,
+    "day_is_today":  true,
+    "total_gt_zero":  true,
+    "by_component_present":  true,
+    "source_csv_exists":  true,
+    "summary_file":  {
+                         "ts_utc":  "2025-10-14T02:33:35Z",
+                         "day":  "2025-10-14",
+                         "total_pkr":  0.25,
+                         "by_component":  {
+                                              "llm":  0,
+                                              "retrieval":  0.25
+                                          },
+                         "row_count":  10
+                     }
+}

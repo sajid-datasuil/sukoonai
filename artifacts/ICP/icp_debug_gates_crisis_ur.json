@@ -1,0 +1,12 @@
+﻿{
+    "module_file":  "C:\\Users\\dell\\Projects\\sukoonai-org\\app\\policies\\term_gates.py",
+    "sha1":  "39c8dd368cc2",
+    "probe":  {
+                  "route":  "crisis",
+                  "matched_terms":  [
+                                        "Ù\u0085Ø¬Ú¾Û ÙÙØ±Û Ù\u0085Ø¯Ø¯",
+                                        "Ù\u0085Ø¬Ú¾Û ÙÙØ±Û Ù\u0085Ø¯Ø¯ Ú©Û Ø¶Ø±ÙØ±Øª"
+                                    ],
+                  "reason":  null
+              }
+}

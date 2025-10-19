@@ -1,0 +1,86 @@
+# Each item marks relevant source(s) at the document level.
+# We match by chunk.source_key ∈ relevant_sources.
+- id: q1
+  query: "مجھے بے چینی ہے، یہ کیا ہے؟"
+  relevant_sources: ["nimh"]
+- id: q2
+  query: "bechaini ki wajahen? roman-ur"
+  relevant_sources: ["nimh"]
+- id: q3
+  query: "what is an anxiety disorder?"
+  relevant_sources: ["nimh"]
+- id: q4
+  query: "what is depression (symptoms, treatment)?"
+  relevant_sources: ["medlineplus"]
+- id: q5
+  query: "افسردگی کیا ہے"
+  relevant_sources: ["medlineplus"]
+- id: q6
+  query: "mayusi me kya karein?"
+  relevant_sources: ["medlineplus"]
+- id: q7
+  query: "ICD-11 depressive disorders overview"
+  relevant_sources: ["icd11"]
+- id: q8
+  query: "ICD-11 anxiety chapter info"
+  relevant_sources: ["icd11"]
+- id: q9
+  query: "panic attack help (NIMH guidance)"
+  relevant_sources: ["nimh"]
+- id: q10
+  query: "دل گھبرانا—kya yeh anxiety ho sakti hai?"
+  relevant_sources: ["nimh"]
+- id: q11
+  query: "clinical depression overview (NHS)"
+  relevant_sources: ["nhs"]
+- id: q12
+  query: "treatments for depression (NHS page)"
+  relevant_sources: ["nhs"]
+- id: q13
+  query: "depression symptoms according to NHS"
+  relevant_sources: ["nhs"]
+- id: q14
+  query: "anxiety disorders overview (MedlinePlus)"
+  relevant_sources: ["medlineplus"]
+- id: q15
+  query: "panic attacks info (MedlinePlus)"
+  relevant_sources: ["medlineplus"]
+- id: q16
+  query: "پریشانی کی علامات کیا ہیں؟"
+  relevant_sources: ["nimh","medlineplus"]
+- id: q17
+  query: "افسردگی کے علاج کے اختیارات کیا ہیں؟"
+  relevant_sources: ["nhs","medlineplus"]
+- id: q18
+  query: "bechaini ke liye madad (roman-ur)"
+  relevant_sources: ["nimh","medlineplus"]
+- id: q19
+  query: "self-harm crisis guidance"
+  relevant_sources: ["nimh","medlineplus"]
+- id: q20
+  query: "ICD-11 mood disorders structure"
+  relevant_sources: ["icd11"]
+- id: q21
+  query: "ICD-11 anxiety categories"
+  relevant_sources: ["icd11"]
+- id: q22
+  query: "what is anxiety? basic explanation"
+  relevant_sources: ["nimh","medlineplus"]
+- id: q23
+  query: "what helps with depression day to day?"
+  relevant_sources: ["nhs","medlineplus"]
+- id: q24
+  query: "major depressive disorder info (plain language)"
+  relevant_sources: ["medlineplus","nhs"]
+- id: q25
+  query: "دل گھبرا رہا ہے—kya karun?"
+  relevant_sources: ["nimh","medlineplus"]
+- id: q26
+  query: "What is the PHQ-2 and how is it used?"
+  relevant_sources: ["phq2","phq9","phq-scoring"]
+- id: q27
+  query: "How do you score the PHQ-9?"
+  relevant_sources: ["phq9","phq-scoring"]
+- id: q28
+  query: "GAD-7 interpretation thresholds"
+  relevant_sources: ["gad7","phq-gad7"]

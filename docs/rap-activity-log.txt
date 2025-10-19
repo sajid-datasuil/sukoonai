@@ -1,0 +1,39 @@
+# Review & Audit Phase (RAP) — Activity Log
+# Owner: Zia | Project: SukoonAI | Phase: Stage-0 → Close
+# Format: [Date] [Activity] | Artifact(s) | Outcome | Link/Commit | Time | Owner | Notes
+
+2025-10-11  Stage-0 decision: Port Policy (8000 default, 8001 fallback) |
+             README.md, Architecture.md, Runbook.md |
+             Updated docs, consistent policy |
+             commit:<paste-hash> / PR:<link> |
+             15m | Zia |
+             Aligned tests/CI on 8000.
+
+2025-10-11  Quick-start runnable path verified |
+             README.md |
+             Added API run + health check; closed code fence |
+             commit:<paste-hash> |
+             10m | Zia |
+             Works on local machine.
+
+2025-10-11  Runbook endpoint alignment |
+             Runbook.md |
+             Switched POST from /api/web/turn → /assist; kept Port Policy |
+             commit:<paste-hash> |
+             10m | Zia |
+             Matches RAP tests.
+
+2025-10-11  Health check OK (dev) |
+             /healthz |
+             {"status":"ok","engine":"sapi"} |
+             commit:<hash after latest commit> |
+             2m | Zia |
+             Baseline server boot confirmed on 8000.
+
+# Use this template for future entries:
+YYYY-MM-DD  <Short activity> |
+             <Files/paths> |
+             <Outcome (PASS/fix/blocked)> |
+             commit:<hash> / issue:<#> / PR:<link> |
+             <Time spent> | <Owner> |
+             <Notes (risks/next)>

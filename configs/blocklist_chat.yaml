@@ -1,0 +1,11 @@
+# configs/blocklist_chat.yaml  (TEMPLATE — fill locally; do NOT paste real tokens here)
+# Put the *real* tokens in your local repo only. In ChatGPT, keep placeholders.
+intent:
+  - "<INTENT_TOKEN_1>"   # e.g., real English/Urdu intent phrase
+  - "<INTENT_TOKEN_2>"
+means:
+  - "<MEANS_TOKEN_1>"    # e.g., specific method word(s)
+  - "<MEANS_TOKEN_2>"
+time:
+  - "<TIME_TOKEN_1>"     # e.g., temporal cues
+  - "<TIME_TOKEN_2>"

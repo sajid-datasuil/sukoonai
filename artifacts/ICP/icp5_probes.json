@@ -1,0 +1,19 @@
+{
+  "healthz": {
+    "status": 200,
+    "ok": true,
+    "content": {
+      "status": "ok"
+    }
+  },
+  "ui_static": {
+    "status": 200,
+    "ok": true,
+    "content": "﻿<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"/>\n  <title>SukoonAI — Web Demo</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/>\n  <style>\n    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#f7fafc;margin:0}\n    header{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid #e2e8f0;background:#fff;posi"
+  },
+  "turn_neutral": {
+    "status": 0,
+    "ok": false,
+    "error": "timed out"
+  }
+}

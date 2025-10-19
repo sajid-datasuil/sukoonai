@@ -1,0 +1,8 @@
+﻿[
+  {"q": "4-7-8 breathing",           "gold_doc_ids": ["gad7", "phq9"]},
+  {"q": "5-4-3-2-1 grounding",       "gold_doc_ids": ["gad7", "phq9"]},
+  {"q": "what is anxiety",           "gold_doc_ids": ["gad7"]},
+  {"q": "self-care for anxiety",     "gold_doc_ids": ["gad7"]},
+  {"q": "when to seek help anxiety", "gold_doc_ids": ["gad7"]},
+  {"q": "what is depression",        "gold_doc_ids": ["phq9"]}
+]

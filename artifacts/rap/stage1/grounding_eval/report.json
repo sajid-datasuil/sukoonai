@@ -1,0 +1,9 @@
+﻿{
+    "ts_utc":  "2025-10-14T02:32:49Z",
+    "evidence_cap_ok":  true,
+    "recall_at_k":  1,
+    "passed":  true,
+    "k":  1,
+    "evidence_count":  1,
+    "gold_defined":  false
+}

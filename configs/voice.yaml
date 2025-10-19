@@ -1,0 +1,9 @@
+# UTF-8 LF
+sample_rate_hz: 16000
+channels: 1
+frame_ms: 20
+asr_backend: mock
+tts_backend: mock
+budgets:
+  max_tokens: 4096
+  max_time_ms: 1500   # Week-1 local target
