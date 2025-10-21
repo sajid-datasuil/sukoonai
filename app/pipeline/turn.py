@@ -3,6 +3,7 @@ import time
 import re
 import unicodedata  # normalize incoming user text
 from pathlib import Path
+import os
 
 # --- tiny retrieval fallback (≤3) if your main retriever isn't wired ---
 def _mini_tokens(s: str) -> set:
@@ -108,6 +109,41 @@ def _mk_timings_alias(metrics: Dict[str, Any]) -> Dict[str, int]:
         "handoff_ms": 0,
         "total_ms": int(metrics.get("total_ms", 0)),
     }
+_client = None
+
+try:
+    # openai >= 1.x
+    from openai import OpenAI
+    _key = os.getenv("OPENAI_API_KEY", "").strip()
+    if _key:
+        _client = OpenAI(api_key=_key)
+except Exception:
+    _client = None
+
+_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # or gpt-4o-mini, o3-mini etc.
+
+SYSTEM_PROMPT = (
+    "You are a calm, supportive mental-wellness assistant. "
+    "Use short, clear sentences. If you use evidence, cite it conversationally."
+)
+
+def _answer_with_openai(prompt: str, evidence: List[Dict[str, Any]]) -> str:
+    # Build a short context from evidence
+    ctx_lines = []
+    for ev in (evidence or [])[:3]:
+        t = (ev.get("text") or "").strip()
+        if t:
+            ctx_lines.append(t[:400])
+    ctx = "\n\n".join(ctx_lines).strip()
+    user = prompt if not ctx else f"Question:\n{prompt}\n\nContext:\n{ctx}\n\nUse the context if relevant."
+    resp = _client.chat.completions.create(
+        model=_MODEL,
+        messages=[{"role": "system", "content": SYSTEM_PROMPT},
+                  {"role": "user", "content": user}],
+        temperature=0.3,
+        max_tokens=350,
+    )
+    return (resp.choices[0].message.content or "").strip()
 
 def run_turn(user_text: str, lang_hint: str = "ur") -> Dict[str, Any]:
     # --- Normalize once to stabilize Urdu/Arabic forms (NFC) ---
@@ -344,6 +380,26 @@ def run_turn(user_text: str, lang_hint: str = "ur") -> Dict[str, Any]:
         )
     except Exception:
         pass
+    warnings = []
+    if _client:
+        try:
+            answer = _answer_with_openai(text, evidence)
+        except Exception as e:
+            warnings.append(f"openai_error:{type(e).__name__}")
+            # graceful fallback
+            answer = ""
+
+    if not answer:
+        # offline fallback
+        if evidence:
+            snippet = (evidence[0].get("text") or "").strip()
+            answer = (snippet[:400] + "…") if len(snippet) > 400 else snippet
+        else:
+            answer = (
+                "I’m here. Let’s take a slow 4–6 breath together: inhale 4, exhale 6, three times. "
+                "What would you like to talk about?"
+            )
+
 
     resp = {
         "ok": True,

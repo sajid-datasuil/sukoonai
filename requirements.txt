@@ -43,3 +43,4 @@ typing_extensions==4.15.0
 urllib3==2.5.0
 uvicorn==0.30.6
 zstandard==0.25.0
+openai==1.40.0
